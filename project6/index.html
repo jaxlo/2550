@@ -1,0 +1,114 @@
+<!-- This entire project is new because my submission for Project 3 used a small CSS library and I got a Zero fot thath -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aperture University</title> <!--Where the science is taught-->
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <script src="js/form.js" defer></script>
+</head>
+<body>
+  <section class="covid-banner">
+    <a href="#"><h3 class="covid-banner-text">Covid-19 Updates</h3></a>
+    <p class="covid-banner-text">Science is our top priority so let's keep teaching</p>
+  </section>
+
+  <header>
+    <div class="top-nav">
+      <div class="au-logo">
+        <a href="#"><img src="static/apuni.png" height="110px" alt="Aperture University logo"></a>
+      </div>
+      <button class="blue-btn">Apply</button>
+      <button class="blue-btn">Students</button>
+    </div>
+    <nav>
+      <ul class="nav-bar">
+        <li class="nav-list"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-list"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-list"><a href="#" class="nav-link">Contact</a></li>
+        <div class="academic-drop">
+          <li class="nav-list"><a href="#" class="nav-link">Academics</a></li>
+          <div class="academic-drop-content">
+            <li class="nav-list"><a href="#" class="nav-link">Undergraduate</a></li>
+            <li class="nav-list"><a href="#" class="nav-link">Postgraduate</a></li>
+            <li class="nav-list"><a href="#" class="nav-link">PostPostgraduate</a></li>
+          </div>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <div>
+    <img src="static/park.jpg" style="width: 100%; border-bottom: solid; border-color:#0082fd;">
+    <!--TODO have an animation that flys in over the image-->
+  </div>
+
+  <main class="grid-con">
+    <div></div> <!-- Div for css grid. Add content to the sides? -->
+    <div>
+      <h1>Welcome to Aperture University! Opening in 2024</h1>
+      <div id="tableBox">
+        <p>We will be the next big university. See who is currently interested:</p>
+        <table id="record-table">
+          <tr id="table-menu">
+            <th>Name</th>
+            <th>Location</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+          <tr>
+            <td>If you see this, the javascript ran into an error</td>
+          </tr>
+        </table>
+        <button class="lg-btn" onclick="toggleVisible()">Add Entry</button>
+      </div>
+      <div id="inputBox"  class="input-box">
+        <form id="int-form" onsubmit="return false;"><!--return false just stops the form from reloading the page-->
+          <h3>Record your interest</h3>
+          <div class="field">
+            <label class="label" for="name">Name:</label>
+            <input type="text" id="form-name" name="name" required minlength="4" placeholder="Enter your fullname" />
+          </div>
+          <div class="field">
+            <label class="label" for="location">Location:</label>
+            <input type="location" id="form-location" name="location" required placeholder="Enter your location" />
+          </div>
+          <div class="field">
+            <label class="label" for="email">Email:</label>
+            <input type="email" id="form-email" name="email" required placeholder="Enter your email address" />
+          </div>
+          <div style="display:flex; justify-content: space-between; padding-top: 1rem;">
+            <div class="checkboxes">
+              <input type="checkbox" id="form-student" name="form-student">
+              <label for="form-student">Interested student</label><br>
+            </div>
+            <div class="checkboxes">
+              <input type="checkbox" id="form-professor" name="form-professor">
+              <label for="form-professor">Interested professor</label><br>
+            </div>
+            <div class="checkboxes">
+              <input type="checkbox" id="form-investor" name="form-investor">
+              <label for="form-investor">Interested investor</label><br>
+            </div>
+          </div>
+          <button class="lg-btn" type="submit" id="form-submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div></div> <!-- Div for css grid. Add content to the sides? -->
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="#">Sitemap</a></li>
+      <li><a href="#">Robots</a></li>
+      <li><a href="#">Liability</a></li>
+      <li><a href="https://files.eric.ed.gov/fulltext/EJ1252571.pdf">Institutionalisation</a></li>
+    </ul>
+    <img src="static/apuni.png" height="80px" alt="Aperture University logo">
+  </footer>
+
+</body>
+</html>
